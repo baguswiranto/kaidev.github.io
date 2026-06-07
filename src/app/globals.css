@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+:root {
+  --background: #030014;
+  --foreground: #e2e8f0;
+  --primary: #a855f7;
+  --secondary: #22d3ee;
+  --accent: #818cf8;
+  --card-bg: rgba(17, 24, 39, 0.6);
+  --card-border: rgba(168, 85, 247, 0.2);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary) transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Animated gradient text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary), var(--secondary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 200%;
+  animation: gradient-shift 4s ease infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Glow effects */
+.glow-purple {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3), 0 0 60px rgba(168, 85, 247, 0.1);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.3), 0 0 60px rgba(34, 211, 238, 0.1);
+}
+
+/* Card glass effect */
+.glass-card {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--card-border);
+  transition: all 0.3s ease;
+}
+
+.glass-card:hover {
+  border-color: rgba(168, 85, 247, 0.5);
+  box-shadow: 0 0 30px rgba(168, 85, 247, 0.15), 0 0 60px rgba(168, 85, 247, 0.05);
+  transform: translateY(-4px);
+}
+
+/* Star twinkle animation */
+@keyframes twinkle {
+  0%, 100% { opacity: var(--star-opacity, 0.3); }
+  50% { opacity: 1; }
+}
+
+.star {
+  animation: twinkle var(--duration, 4s) ease-in-out var(--delay, 0s) infinite;
+}
+
+/* Section divider */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary), var(--secondary), var(--primary), transparent);
+  opacity: 0.3;
+}
+
+/* Button styles */
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  border: 1px solid var(--primary);
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: rgba(168, 85, 247, 0.1);
+  box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+  transform: translateY(-2px);
+}
+
+/* Skill badge animation */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-5px); }
+}
+
+.skill-badge {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Nebula glow effect */
+.nebula-glow {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  pointer-events: none;
+}
+
+/* Smooth section transitions */
+section {
+  position: relative;
+}
+
+/* Selection color */
+::selection {
+  background: rgba(168, 85, 247, 0.3);
+  color: white;
+}
