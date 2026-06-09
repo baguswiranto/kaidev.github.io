@@ -68,7 +68,7 @@ export function DomainExpansion() {
               height: "min(80vh, 600px)",
               opacity: 0,
               animation: "gojo-domain-enter 1s cubic-bezier(0.16, 1, 0.3, 1) 0.3s forwards",
-              filter: "drop-shadow(0 0 60px rgba(31, 90, 255, 0.5)) drop-shadow(0 0 120px rgba(123, 47, 190, 0.3))",
+              filter: "drop-shadow(0 0 40px rgba(31, 90, 255, 0.6)) drop-shadow(0 0 80px rgba(138, 43, 226, 0.4)) drop-shadow(0 0 120px rgba(209, 230, 255, 0.2))",
             }}
           >
             <img
