@@ -498,3 +498,117 @@ html {
   0% { background-position: 0 0, 0 0; }
   100% { background-position: 60px 60px, 60px 60px; }
 }
+
+/* ============================================
+   GOJO SILHOUETTE — Floating animation
+   ============================================ */
+@keyframes gojo-float {
+  0%, 100% { transform: translateY(0) scale(1); }
+  25% { transform: translateY(-12px) scale(1.01); }
+  50% { transform: translateY(-6px) scale(0.99); }
+  75% { transform: translateY(-15px) scale(1.005); }
+}
+
+.gojo-hair {
+  animation: gojo-hair-sway 6s ease-in-out infinite;
+}
+
+@keyframes gojo-hair-sway {
+  0%, 100% { d: path("M150 20 C130 10, 100 5, 95 30"); }
+  50% { d: path("M150 18 C128 8, 98 3, 93 28"); }
+}
+
+.gojo-blindfold {
+  animation: blindfold-glow 4s ease-in-out infinite;
+}
+
+@keyframes blindfold-glow {
+  0%, 100% { filter: drop-shadow(0 0 3px rgba(0, 212, 255, 0.2)); }
+  50% { filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.5)); }
+}
+
+.gojo-eye-left, .gojo-eye-right {
+  animation: eye-pulse 2.5s ease-in-out infinite;
+}
+
+.gojo-eye-right {
+  animation-delay: 0.15s;
+}
+
+@keyframes eye-pulse {
+  0%, 100% { r: 2; opacity: 0.4; }
+  50% { r: 3; opacity: 0.8; }
+}
+
+.gojo-infinity-hand {
+  animation: infinity-float 3s ease-in-out infinite;
+  stroke-dasharray: 4 2;
+  stroke-dashoffset: 0;
+}
+
+@keyframes infinity-float {
+  0%, 100% { transform: translateY(0); stroke-dashoffset: 0; }
+  50% { transform: translateY(-5px); stroke-dashoffset: 6; }
+}
+
+/* ============================================
+   SIX EYES — Blink animation
+   ============================================ */
+@keyframes six-eyes-blink {
+  0%, 45%, 55%, 100% { transform: scaleY(1); opacity: 1; }
+  50% { transform: scaleY(0.1); opacity: 0.5; }
+}
+
+/* ============================================
+   CURSED TECHNIQUE ORB — Float + Pulse
+   ============================================ */
+@keyframes technique-float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(2deg); }
+  66% { transform: translateY(5px) rotate(-1deg); }
+}
+
+@keyframes technique-ring-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes technique-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+
+/* ============================================
+   BLINDFOLD REVEAL — Pulse ring
+   ============================================ */
+@keyframes blindfold-pulse {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.3); opacity: 0; }
+}
+
+/* ============================================
+   SECTION HEADER — Cursed energy aura
+   ============================================ */
+.section-header-aura {
+  position: relative;
+}
+
+.section-header-aura::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 200%;
+  background: radial-gradient(ellipse at center, rgba(123, 47, 190, 0.12) 0%, rgba(0, 212, 255, 0.05) 40%, transparent 70%);
+  filter: blur(20px);
+  pointer-events: none;
+  animation: header-aura-pulse 5s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes header-aura-pulse {
+  0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 1; transform: translate(-50%, -50%) scale(1.1); }
+}

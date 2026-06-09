@@ -6,6 +6,10 @@ import { CustomCursor } from "@/components/custom-cursor";
 import { DomainExpansion } from "@/components/domain-expansion";
 import { TypingEffect } from "@/components/typing-effect";
 import { ProjectCard } from "@/components/project-card";
+import { GojoSilhouette } from "@/components/gojo-silhouette";
+import { SixEyes } from "@/components/six-eyes";
+import { CursedTechniques } from "@/components/cursed-techniques";
+import { BlindfoldReveal } from "@/components/blindfold-reveal";
 import { motion, useScroll, useSpring } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import {
@@ -75,7 +79,7 @@ function Reveal({ children, className }: { children: React.ReactNode; className?
 function SectionHeader({ children }: { children: React.ReactNode }) {
   return (
     <Reveal>
-      <div className="flex items-center justify-center gap-4 mb-12">
+      <div className="flex items-center justify-center gap-4 mb-12 section-header-aura">
         <div className="h-px w-12 bg-gradient-to-r from-transparent to-purple-500/50" />
         <h2 className="text-3xl font-bold">
           {children}
@@ -150,10 +154,17 @@ export default function Home() {
       <CustomCursor />
       <DomainExpansion />
       <BackToTop />
+      <SixEyes />
 
       {/* Hero */}
       <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">
         <CosmicGlow />
+
+        {/* Gojo silhouette floating in background */}
+        <GojoSilhouette />
+
+        {/* Cursed technique orbs */}
+        <CursedTechniques />
 
         {/* Floating infinity symbols in background */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -224,25 +235,7 @@ export default function Home() {
               <div className="glass-card rounded-2xl p-8 md:p-12">
                 <div className="flex flex-col md:flex-row gap-8 items-center">
                   <div className="relative shrink-0">
-                    <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-purple-500/50">
-                      <img
-                        src="/profile.jpg"
-                        alt="Bagus Wiranto Wicaksono"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                    {/* Pulsing glow ring */}
-                    <div
-                      className="absolute inset-0 rounded-full"
-                      style={{
-                        border: "2px solid transparent",
-                        background: "linear-gradient(135deg, rgba(123, 47, 190, 0.3), rgba(0, 212, 255, 0.3)) border-box",
-                        WebkitMask: "linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0)",
-                        WebkitMaskComposite: "xor",
-                        maskComposite: "exclude",
-                        animation: "profile-glow 3s ease-in-out infinite",
-                      }}
-                    />
+                    <BlindfoldReveal />
                   </div>
                   <div>
                     <p className="text-slate-300 leading-[1.8] mb-4">
@@ -439,3 +432,4 @@ export default function Home() {
     </>
   );
 }
+
