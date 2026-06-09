@@ -70,6 +70,18 @@ body {
   position: relative;
 }
 
+@media (max-width: 768px) {
+  .hero-name {
+    animation: infinity-gradient 12s ease-in-out infinite;
+    filter: none;
+    text-shadow: 0 0 20px rgba(123, 47, 190, 0.3);
+  }
+  .gradient-text {
+    animation: none;
+    background-position: 0% 50%;
+  }
+}
+
 @keyframes infinity-gradient {
   0% { background-position: 0% 50%; }
   25% { background-position: 50% 0%; }
@@ -443,27 +455,23 @@ section {
    ============================================ */
 @media (max-width: 768px) {
   .glass-card {
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
   }
-
   .glass-card:hover {
     transform: none;
   }
-
   .spatial-hover:hover {
     transform: none;
   }
-
   section {
     will-change: auto;
   }
-
   .infinity-border {
-    animation-duration: 10s;
+    animation: none;
   }
-
   .infinity-border:hover {
-    animation-duration: 6s;
+    animation: none;
   }
 }
 

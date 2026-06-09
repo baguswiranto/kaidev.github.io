@@ -45,33 +45,35 @@ export function DomainExpansion() {
           background: isMobile ? "rgba(3, 0, 20, 0.98)" : "rgba(3, 0, 20, 0.92)",
         }}>
 
-          {/* Cosmic energy particles — mobile: 10, desktop: 30 */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            {Array.from({ length: particleCount }).map((_, i) => {
-              const x = ((i * 47 + 13) % 100);
-              const y = ((i * 73 + 31) % 100);
-              const size = isMobile ? 2 + (i % 3) : 2 + (i % 5);
-              const delay = (i * 0.1);
-              return (
-                <div
-                  key={i}
-                  className="absolute rounded-full"
-                  style={{
-                    left: `${x}%`,
-                    top: `${y}%`,
-                    width: size,
-                    height: size,
-                    background: i % 4 === 0 ? "#1F5AFF" : i % 4 === 1 ? "#8A2BE2" : i % 4 === 2 ? "#D1E6FF" : "#FFFFFF",
-                    boxShadow: isMobile ? "none" : `0 0 ${size * 6}px ${i % 4 === 0 ? "rgba(31,90,255,0.8)" : i % 4 === 1 ? "rgba(138,43,226,0.8)" : "rgba(209,230,255,0.6)"}`,
-                    animation: `cursed-float ${2 + (i % 3)}s ease-in-out ${delay}s infinite`,
-                    ["--drift" as string]: `${(i % 2 === 0 ? 1 : -1) * (25 + i * 3)}px`,
-                    ["--particle-opacity" as string]: "0.9",
-                    willChange: "transform, opacity",
-                  }}
-                />
-              );
-            })}
-          </div>
+          {/* Cosmic energy particles — desktop only */}
+          {!isMobile && (
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              {Array.from({ length: 30 }).map((_, i) => {
+                const x = ((i * 47 + 13) % 100);
+                const y = ((i * 73 + 31) % 100);
+                const size = 2 + (i % 5);
+                const delay = (i * 0.1);
+                return (
+                  <div
+                    key={i}
+                    className="absolute rounded-full"
+                    style={{
+                      left: `${x}%`,
+                      top: `${y}%`,
+                      width: size,
+                      height: size,
+                      background: i % 4 === 0 ? "#1F5AFF" : i % 4 === 1 ? "#8A2BE2" : i % 4 === 2 ? "#D1E6FF" : "#FFFFFF",
+                      boxShadow: `0 0 ${size * 6}px ${i % 4 === 0 ? "rgba(31,90,255,0.8)" : i % 4 === 1 ? "rgba(138,43,226,0.8)" : "rgba(209,230,255,0.6)"}`,
+                      animation: `cursed-float ${2 + (i % 3)}s ease-in-out ${delay}s infinite`,
+                      ["--drift" as string]: `${(i % 2 === 0 ? 1 : -1) * (25 + i * 3)}px`,
+                      ["--particle-opacity" as string]: "0.9",
+                      willChange: "transform, opacity",
+                    }}
+                  />
+                );
+              })}
+            </div>
+          )}
 
           {/* Gojo portrait — fills entire screen, transparent bg */}
           <div
