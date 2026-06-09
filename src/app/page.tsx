@@ -25,6 +25,7 @@ import {
 } from "lucide-react";
 
 const SKILLS = [
+  { name: "Self-taught", icon: Zap },
   { name: "Next.js", icon: Code2 },
   { name: "TypeScript", icon: Code2 },
   { name: "Python", icon: Terminal },
@@ -185,7 +186,7 @@ export default function Home() {
           </Reveal>
           <Reveal>
             <p className="text-lg md:text-xl text-slate-300 mb-8 leading-[1.8]">
-              Full-stack developer building AI-powered platforms.
+              Full-stack developer who rapidly masters new technologies to ship AI-powered platforms.
               <br />
               Founder of{" "}
               <a href="https://8agents.xyz" target="_blank" className="text-orange-400 hover:text-orange-300 underline underline-offset-4">
@@ -246,10 +247,10 @@ export default function Home() {
                   </div>
                   <div>
                     <p className="text-slate-300 leading-[1.8] mb-4">
-                      I&apos;m a full-stack developer and entrepreneur based in Japan, passionate about building products that solve real problems. My focus is on AI-powered platforms and automation — turning complex workflows into simple, user-friendly experiences.
+                      I&apos;m a self-taught full-stack developer and entrepreneur based in Japan, driven by curiosity and a hunger to learn. I thrive on rapidly acquiring new skills and technologies — then turning them into production-ready products that solve real problems.
                     </p>
                     <p className="text-slate-300 leading-[1.8] mb-4">
-                      Currently running two SaaS platforms: <strong className="text-orange-400">8Agents</strong> (AI Agent marketplace) and <strong className="text-pink-400">RakuSaku</strong> (digital services marketplace). Both built with Next.js, FastAPI, and Docker.
+                      From zero to production in months: I mastered Next.js, FastAPI, Docker, and Telegram Bot API to build <strong className="text-orange-400">8Agents</strong> (AI Agent marketplace) and <strong className="text-pink-400">RakuSaku</strong> (digital services marketplace) — two SaaS platforms now live and serving users.
                     </p>
                     <p className="text-slate-400 text-sm flex items-center gap-2">
                       Based in Japan 🇯🇵 · Open to collaboration
