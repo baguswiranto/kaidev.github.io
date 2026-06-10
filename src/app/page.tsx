@@ -206,30 +206,11 @@ export default function Home() {
           >
             <TypingEffect />
           </motion.p>
-          <motion.h1
-            className="text-5xl md:text-7xl font-black mb-6 hero-name leading-tight"
-            initial={{ opacity: 0, y: 50, filter: "blur(12px)" }}
-            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-            transition={{ delay: 0.3, duration: 1, ease: [0.22, 1, 0.36, 1] }}
-          >
-            <motion.span
-              className="inline-block"
-              initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ delay: 0.4, duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            >
-              Bagus Wiranto
-            </motion.span>
+          <h1 className="text-5xl md:text-7xl font-black mb-6 hero-name leading-tight">
+            <span className="inline-block">Bagus Wiranto</span>
             <br />
-            <motion.span
-              className="inline-block"
-              initial={{ opacity: 0, y: 40, filter: "blur(8px)" }}
-              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
-              transition={{ delay: 0.6, duration: 1, ease: [0.22, 1, 0.36, 1] }}
-            >
-              Wicaksono
-            </motion.span>
-          </motion.h1>
+            <span className="inline-block">Wicaksono</span>
+          </h1>
           <Reveal>
             <p className="text-lg md:text-xl text-slate-300 mb-8 leading-[1.8]">
               Full-stack developer who rapidly masters new technologies to ship AI-powered platforms.
