@@ -93,15 +93,19 @@ function Reveal({ children, className }: { children: React.ReactNode; className?
   );
 }
 
-function SectionHeader({ children }: { children: React.ReactNode }) {
+function SectionHeader({ children, eyebrow }: { children: React.ReactNode; eyebrow?: string }) {
   return (
     <Reveal>
-      <div className="flex items-center justify-center gap-4 mb-12">
-        <div className="h-px w-12 bg-gradient-to-r from-transparent to-purple-500/50" />
-        <h2 className="text-3xl font-bold">
+      <div className="flex flex-col items-center justify-center gap-2 mb-16">
+        {eyebrow && (
+          <span className="text-[10px] tracking-[0.4em] uppercase text-slate-500 font-bold mb-1">
+            {eyebrow}
+          </span>
+        )}
+        <h2 className="text-4xl md:text-5xl font-black font-serif italic text-center">
           {children}
         </h2>
-        <div className="h-px w-12 bg-gradient-to-l from-transparent to-blue-400/50" />
+        <div className="mt-4 h-px w-24 bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />
       </div>
     </Reveal>
   );
@@ -217,15 +221,15 @@ export default function HomeClient() {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
           <motion.p
-            className="text-sm tracking-[0.24em] uppercase mb-6 text-blue-400/80"
+            className="text-sm tracking-[0.24em] uppercase mb-6 text-blue-400/80 font-medium"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
           >
-            Full-Stack Developer · AI Automation · Product Builder
+            01 — Full-Stack Developer · AI Automation · Product Builder
           </motion.p>
           <motion.h1
-            className="text-5xl md:text-7xl font-black mb-6 hero-name leading-tight"
+            className="text-5xl md:text-8xl font-black mb-8 hero-name leading-[1.1] font-serif italic"
           >
             <span className="inline-block">Bagus Wiranto</span>
             <br />
@@ -272,7 +276,7 @@ export default function HomeClient() {
       {/* About */}
       <section id="about" className="py-28 px-4">
         <div className="max-w-4xl mx-auto">
-          <SectionHeader>
+          <SectionHeader eyebrow="02 — Biography">
             About <span className="gradient-text">Me</span>
           </SectionHeader>
           <Reveal>
@@ -332,7 +336,7 @@ export default function HomeClient() {
       {/* Skills */}
       <section id="skills" className="py-28 px-4">
         <div className="max-w-4xl mx-auto">
-          <SectionHeader>
+          <SectionHeader eyebrow="03 — Expertise">
             Tech <span className="gradient-text">Stack</span>
           </SectionHeader>
           <Reveal>
@@ -364,7 +368,7 @@ export default function HomeClient() {
       {/* Projects */}
       <section id="projects" className="py-28 px-4">
         <div className="max-w-4xl mx-auto">
-          <SectionHeader>
+          <SectionHeader eyebrow="04 — Portfolio">
             Featured <span className="gradient-text">Projects</span>
           </SectionHeader>
           <div className="grid md:grid-cols-2 gap-6">
@@ -394,7 +398,7 @@ export default function HomeClient() {
       {/* Experience */}
       <section id="experience" className="py-28 px-4">
         <div className="max-w-4xl mx-auto">
-          <SectionHeader>
+          <SectionHeader eyebrow="05 — Journey">
             <span className="gradient-text">Experience</span>
           </SectionHeader>
           <Reveal>
@@ -435,7 +439,7 @@ export default function HomeClient() {
       {/* Contact */}
       <section id="contact" className="py-28 px-4">
         <div className="max-w-2xl mx-auto text-center">
-          <SectionHeader>
+          <SectionHeader eyebrow="06 — Networking">
             Get in <span className="gradient-text">Touch</span>
           </SectionHeader>
           <Reveal>

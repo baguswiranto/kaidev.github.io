@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+@page { margin: 0; size: A4; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; font-size: 12px; line-height: 1.5; color: #1e293b; background: #fff; }
+.page { width: 210mm; min-height: 297mm; padding: 18mm 20mm; margin: auto; }
+h1 { font-size: 22px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; text-align: center; margin-bottom: 2px; }
+.title { text-align: center; font-size: 14px; font-weight: 500; color: #0f172a; margin-bottom: 4px; }
+.contact { text-align: center; font-size: 10.5px; color: #64748b; margin-bottom: 14px; word-break: break-all; }
+.section-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.2em; border-bottom: 1px solid #cbd5e1; padding-bottom: 3px; margin-bottom: 6px; margin-top: 10px; color: #0f172a; }
+.summary-text { font-size: 11.5px; line-height: 1.6; color: #334155; }
+.exp-block { margin-bottom: 8px; break-inside: avoid; }
+.exp-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; }
+.exp-role { font-weight: 600; font-size: 12px; }
+.exp-date { color: #64748b; font-size: 11px; }
+.exp-company { color: #475569; font-size: 11px; margin-bottom: 2px; }
+.exp-location { color: #64748b; font-size: 10.5px; margin-bottom: 2px; }
+.exp-bullets { list-style: disc; padding-left: 16px; margin-top: 2px; }
+.exp-bullets li { font-size: 11px; color: #334155; margin-bottom: 2px; line-height: 1.5; }
+.edu-block { break-inside: avoid; }
+.edu-item { display: flex; justify-content: space-between; align-items: baseline; }
+.edu-degree { font-weight: 600; font-size: 11.5px; }
+.edu-school { color: #475569; font-size: 11px; }
+.edu-year { color: #64748b; font-size: 10.5px; }
+.skills-list { font-size: 11px; color: #334155; line-height: 1.7; }
+.lang-item { font-size: 11px; color: #334155; margin-bottom: 2px; }
+.cert-block { break-inside: avoid; margin-bottom: 4px; }
+.cert-item { display: flex; justify-content: space-between; align-items: baseline; }
+.cert-name { font-weight: 600; font-size: 11.5px; }
+.cert-org { color: #475569; font-size: 11px; }
+.cert-year { color: #64748b; font-size: 10.5px; }
+</style>
+</head>
+<body>
+<div class="page">
+  <h1>Bagus Wiranto Wicaksono</h1>
+  <p class="title">Full-Stack Developer &amp; AI Automation Engineer</p>
+  <p class="contact">baguswirantowicaksono@gmail.com | +81 70-8402-3941 | Ogawara, Miyagi, Japan | linkedin.com/in/baguswiranto | github.com/baguswiranto | baguswiranto.github.io</p>
+
+  <div class="section-title">Professional Summary</div>
+  <p class="summary-text">AI-focused full-stack developer and product builder based in Japan. Founder of 8Agents — a production multi-agent SaaS platform with 15+ autonomous AI agents, and RakuSaku — a digital services marketplace. Proven track record shipping full-stack applications with Next.js, Python/FastAPI, Docker, and AI automation.</p>
+
+  <div class="section-title">Work Experience</div>
+
+  <div class="exp-block">
+    <div class="exp-header">
+      <span class="exp-role">Founder &amp; Full-Stack Developer</span>
+      <span class="exp-date">2024 — Present</span>
+    </div>
+    <div class="exp-company">8Agents · Remote / Japan</div>
+    <ul class="exp-bullets">
+      <li>Built and deployed a production multi-agent SaaS platform with 15+ autonomous AI agents accessible via Telegram, handling the entire stack from auth to payment gateway</li>
+      <li>Architected multi-provider AI gateway supporting 10+ LLM providers with automatic failover and rate limiting</li>
+      <li>Designed and deployed a complete admin dashboard with user management, subscription tracking, and usage analytics</li>
+      <li>Led infrastructure setup including Docker, PostgreSQL, Nginx, and CI/CD with zero-downtime deployments</li>
+    </ul>
+  </div>
+
+  <div class="exp-block">
+    <div class="exp-header">
+      <span class="exp-role">Founder &amp; Full-Stack Developer</span>
+      <span class="exp-date">2025 — Present</span>
+    </div>
+    <div class="exp-company">RakuSaku · Remote / Japan</div>
+    <ul class="exp-bullets">
+      <li>Built a digital services marketplace for game top-ups and vouchers with full payment flow and order management</li>
+      <li>Developed admin dashboard with real-time analytics, order tracking, and customer management</li>
+      <li>Integrated supplier API for automated order fulfillment and inventory management</li>
+      <li>Implemented responsive frontend with Next.js and secure authentication system</li>
+    </ul>
+  </div>
+
+  <div class="section-title">Education</div>
+  <div class="edu-block">
+    <div class="edu-item">
+      <span class="edu-degree">Bachelor of Science in Computer Science</span>
+      <span class="edu-year">2020 — 2024</span>
+    </div>
+    <div class="edu-school">Universitas Gadjah Mada</div>
+  </div>
+
+  <div class="section-title">Certifications</div>
+  <div class="cert-block">
+    <div class="cert-item">
+      <span class="cert-name">JLPT N3 — Japanese Language Proficiency Test</span>
+      <span class="cert-year">2025</span>
+    </div>
+    <div class="cert-org">Japan Foundation / Japan Educational Exchanges and Services</div>
+  </div>
+
+  <div class="section-title">Skills</div>
+  <p class="skills-list"><strong>Languages:</strong> TypeScript, Python, JavaScript<br>
+  <strong>Frontend:</strong> Next.js, React, Tailwind CSS<br>
+  <strong>Backend:</strong> FastAPI, Node.js, PostgreSQL<br>
+  <strong>DevOps:</strong> Docker, Nginx, CI/CD, Linux<br>
+  <strong>AI/ML:</strong> LLM Integration, AI Agents, Multi-Provider Gateways</p>
+
+  <div class="section-title">Projects</div>
+  <div class="exp-block">
+    <div class="exp-header">
+      <span class="exp-role">8Agents Multi-Agent Platform</span>
+    </div>
+    <div style="color:#475569;font-size:10.5px;">Next.js · FastAPI · Docker · PostgreSQL · AI Gateway</div>
+    <ul class="exp-bullets">
+      <li>Architected and deployed a production platform orchestrating 15+ autonomous AI agents with multi-provider LLM gateway supporting 10+ providers</li>
+      <li>Built real-time agent communication system, admin dashboard with usage analytics, and Telegram integration with subscription management</li>
+    </ul>
+  </div>
+  <div class="exp-block">
+    <div class="exp-header">
+      <span class="exp-role">RakuSaku Digital Services Marketplace</span>
+    </div>
+    <div style="color:#475569;font-size:10.5px;">Next.js · FastAPI · PostgreSQL · Docker · Nginx</div>
+    <ul class="exp-bullets">
+      <li>Developed a complete e-commerce platform for game top-ups with supplier API integration, automated order fulfillment, and real-time inventory management</li>
+      <li>Implemented admin dashboard with analytics, customer management, and secure payment processing</li>
+    </ul>
+  </div>
+  <div class="exp-block">
+    <div class="exp-header">
+      <span class="exp-role">xurl — X/Twitter CLI Tool</span>
+    </div>
+    <div style="color:#475569;font-size:10.5px;">TypeScript · Node.js · X/Twitter API</div>
+    <ul class="exp-bullets">
+      <li>Built a command-line tool for interacting with X/Twitter API v2, supporting posting, searching, DMs, media uploads, and multi-account management</li>
+      <li>Designed OAuth2 token management system with automatic refresh for headless server environments</li>
+    </ul>
+  </div>
+
+  <div class="section-title">Languages</div>
+  <div class="lang-item"><strong>Indonesian</strong> — Native</div>
+  <div class="lang-item"><strong>English</strong> — Professional Working</div>
+  <div class="lang-item"><strong>Japanese</strong> — JLPT N3</div>
+</div>
+</body>
+</html>

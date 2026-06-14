@@ -66,27 +66,21 @@ export default function MobilePage() {
       {/* Hero */}
       <section className="min-h-[92vh] py-24 flex items-center justify-center px-4 relative overflow-hidden z-[1]">
         <div className="text-center max-w-3xl relative z-10">
-          <p className="text-sm tracking-[0.24em] uppercase mb-6 text-blue-400/80">
-            Full-Stack Developer · AI Automation
+          <p className="text-sm tracking-[0.24em] uppercase mb-6 text-blue-400/80 font-medium">
+            01 — Full-Stack Developer · AI Automation
           </p>
-          <h1 className="text-5xl font-black mb-6 hero-name leading-tight">
+          <h1 className="text-5xl font-black mb-6 hero-name leading-tight font-serif italic">
             <span className="inline-block">Bagus Wiranto</span>
             <br />
             <span className="inline-block">Wicaksono</span>
           </h1>
-          <div>
-            <p className="text-lg md:text-xl text-slate-300 mb-8 leading-[1.8]">
-              I build production-ready web apps, AI automations, and SaaS workflows from idea to deploy.
+          <div className="px-2">
+            <p className="text-lg text-slate-300 mb-8 leading-[1.8] font-medium">
+              Building production-ready web apps and AI automations from idea to deploy.
               <br />
-              Founder of{" "}
-              <a href="https://8agents.xyz" target="_blank" className="text-orange-400 underline underline-offset-4">
-                8Agents
-              </a>{" "}
-              &{" "}
-              <a href="https://rakusaku.com" target="_blank" className="text-pink-400 underline underline-offset-4">
-                RakuSaku
-              </a>
-              . Based in Japan, open to remote USD roles.
+              <span className="text-sm text-slate-400 mt-2 block italic opacity-80">
+                Founder: 8Agents & RakuSaku. Based in Japan.
+              </span>
             </p>
           </div>
           <div className="grid grid-cols-2 gap-3 mb-8">
@@ -125,13 +119,11 @@ export default function MobilePage() {
         className={sectionClass("about-m", "py-20 px-4")}
       >
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-center gap-4 mb-10 section-header">
-            <div className="section-header-aura" />
-            <div className="h-px w-12 bg-gradient-to-r from-transparent to-purple-500/50" />
-            <h2 className="text-3xl font-bold">
+          <div className="flex flex-col items-center justify-center gap-2 mb-10 section-header">
+            <span className="text-[10px] tracking-[0.3em] uppercase text-purple-400/60 font-bold">02 — Biography</span>
+            <h2 className="text-3xl font-black font-serif italic">
               About <span className="gradient-text">Me</span>
             </h2>
-            <div className="h-px w-12 bg-gradient-to-l from-transparent to-blue-400/50" />
           </div>
           <div className="rounded-2xl p-8 glass-card">
             <div className="flex flex-col items-center gap-6 mb-4">
@@ -169,13 +161,11 @@ export default function MobilePage() {
         className={sectionClass("skills-m", "py-20 px-4")}
       >
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-center gap-4 mb-10 section-header">
-            <div className="section-header-aura" />
-            <div className="h-px w-12 bg-gradient-to-r from-transparent to-purple-500/50" />
-            <h2 className="text-3xl font-bold">
+          <div className="flex flex-col items-center justify-center gap-2 mb-10 section-header">
+            <span className="text-[10px] tracking-[0.3em] uppercase text-blue-400/60 font-bold">03 — Expertise</span>
+            <h2 className="text-3xl font-black font-serif italic">
               Tech <span className="gradient-text">Stack</span>
             </h2>
-            <div className="h-px w-12 bg-gradient-to-l from-transparent to-blue-400/50" />
           </div>
           <div className="flex flex-wrap justify-center gap-3">
             {["AI Agents", "Next.js", "TypeScript", "Python", "FastAPI", "Docker", "PostgreSQL", "Tailwind CSS", "Vercel", "Telegram Bot API"].map((skill) => (
@@ -196,13 +186,11 @@ export default function MobilePage() {
         className={sectionClass("projects-m", "py-20 px-4")}
       >
         <div className="max-w-4xl mx-auto">
-          <div className="flex items-center justify-center gap-4 mb-10 section-header">
-            <div className="section-header-aura" />
-            <div className="h-px w-12 bg-gradient-to-r from-transparent to-purple-500/50" />
-            <h2 className="text-3xl font-bold">
+          <div className="flex flex-col items-center justify-center gap-2 mb-10 section-header">
+            <span className="text-[10px] tracking-[0.3em] uppercase text-orange-400/60 font-bold">04 — Portfolio</span>
+            <h2 className="text-3xl font-black font-serif italic">
               Featured <span className="gradient-text">Projects</span>
             </h2>
-            <div className="h-px w-12 bg-gradient-to-l from-transparent to-blue-400/50" />
           </div>
           <div className="grid gap-4">
             {[
