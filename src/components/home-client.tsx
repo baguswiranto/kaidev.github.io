@@ -340,7 +340,16 @@ export default function HomeClient() {
             About <span className="gradient-text">Me</span>
           </SectionHeader>
           <div className="glass-card rounded-2xl p-8 md:p-12">
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col md:flex-row gap-8 items-center">
+              <div className="relative shrink-0">
+                <div className="w-32 h-32 rounded-full overflow-hidden border-2 border-primary/30">
+                  <img
+                    src="/profile.jpg"
+                    alt="Kai"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
               <div>
                 <p className="text-foreground/80 leading-[1.8] mb-4">
                   Full-stack developer based in Japan. I build products that combine polished UX with reliable backend systems and AI automation — from prototype to production.
